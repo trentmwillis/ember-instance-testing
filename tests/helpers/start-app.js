@@ -1,18 +1,12 @@
 import Ember from 'ember';
 import Application from '../../app';
 import config from '../../config/environment';
+import 'ember-instance-testing/test-support/helpers/visit';
+import 'ember-instance-testing/test-support/setup-instance-testing';
+
+let attributes = Ember.merge({ autoboot: false }, config.APP);
+let application = Ember.run(Application, 'create', attributes);
 
 export default function startApp(attrs) {
-  let application;
-
-  let attributes = Ember.merge({}, config.APP);
-  attributes = Ember.merge(attributes, attrs); // use defaults, but you can override;
-
-  Ember.run(() => {
-    application = Application.create(attributes);
-    application.setupForTesting();
-    application.injectTestHelpers();
-  });
-
-  return application;
+  return application.buildTestInstance();
 }

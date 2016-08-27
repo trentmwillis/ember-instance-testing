@@ -1,7 +1,10 @@
 {
   "name": "ember-instance-testing",
   "dependencies": {
-    "ember": "~2.7.0-beta.4",
+    "ember": "beta",
     "ember-cli-shims": "0.1.1"
+  },
+  "resolutions": {
+    "ember": "beta"
   }
 }
