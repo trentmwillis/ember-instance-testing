@@ -1,7 +1,7 @@
 {
   "name": "ember-instance-testing",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Run your Acceptance tests with ApplicationInstances instead of Applications.",
   "directories": {
     "doc": "doc",
     "test": "tests"

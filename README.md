@@ -1,6 +1,28 @@
-# Ember-instance-testing
+# Ember Instance Testing
 
-This README outlines the details of collaborating on this Ember addon.
+This addon allows you to run your Acceptance tests with ApplicationInstances instead of Applications for better performance.
+
+## Usage
+
+Usage is pretty straightforward, just swap out the `startApp` helper in your `moduleForAcceptance` helper with the one provided by this addon.
+
+Before:
+
+```js
+import startApp from '../helpers/start-app';
+// ...
+this.application = startApp();
+```
+
+After:
+
+```js
+import startApp from 'ember-instance-testing/test-support/start-app';
+import App from '../../app';
+import config from '../../config/environment';
+// ...
+this.application = startApp(App, config);
+```
 
 ## Installation
 
