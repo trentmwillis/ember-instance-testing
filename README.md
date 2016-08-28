@@ -1,4 +1,4 @@
-# Ember Instance Testing
+# Ember Instance Testing [![Build Status](https://travis-ci.org/trentmwillis/ember-instance-testing.svg?branch=master)](https://travis-ci.org/trentmwillis/ember-instance-testing)
 
 This addon allows you to run your Acceptance tests with ApplicationInstances instead of Applications for better performance.
 
