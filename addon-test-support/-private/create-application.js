@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+const assign = Ember.assign || Ember.merge;
+
 /**
  * Builds a new Application that is setup to build test instances.
  *
@@ -11,7 +13,8 @@ import Ember from 'ember';
  * @return {Ember.Application} application
  */
 export default function createApplication(App, config, attrs) {
-  const attributes = Ember.assign({}, config.APP, attrs);
+  const baseAttributes = assign({}, config.APP);
+  const attributes = assign(baseAttributes, attrs);
   const application = Ember.run(() => {
     const application = App.create(attributes);
 
